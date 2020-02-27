@@ -1,0 +1,9 @@
+name: 'cfn_nag_action'
+author: 'Bruno Moutinho <brunoe.moutinho@gmail.com>'
+description: 'GitHub Action for cfn_nag'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'box'
+  color: 'black'

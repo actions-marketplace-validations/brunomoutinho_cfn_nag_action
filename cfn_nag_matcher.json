@@ -1,0 +1,22 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "cfn_nag_action",
+            "pattern": [
+                {
+                    "regexp": "^File: (.*)$",
+                    "file": 1
+                },
+                {
+                    "regexp": "^  (.*) - (.*) - (.*) - (.*)$",
+                    "severity": 1,
+                    "code": 2,
+                    "message": 3,
+                    "line": 4,
+                    "loop": true
+                }
+            ]
+        }
+    ]
+}
+
