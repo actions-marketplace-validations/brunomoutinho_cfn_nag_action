@@ -66,7 +66,9 @@ function outputFormattedViolations(violationsList) {
 
 function main() {
   const cfnNagOutput = getTextFromFileAsJSON(CFN_NAG_OUTPUT_FILE);
-  const formattedViolations = cfnNagOutput.map(formatIncidentObjects);
+  const formattedViolations = cfnNagOutput
+    .map(formatIncidentObjects)
+    .filter(({ formattedViolations }) => formattedViolations.length > 0);
 
   outputFormattedViolations(formattedViolations);
 
@@ -77,4 +79,3 @@ function main() {
 }
 
 main();
-
