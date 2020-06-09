@@ -23,11 +23,11 @@ function unwrapViolationsPerLine(violation) {
     severity = "WARNING";
   }
 
-  const unwrappedViolations = lineNumbers.map(lineNumber => ({
+  const unwrappedViolations = lineNumbers.map((lineNumber) => ({
     id,
     severity,
     message,
-    lineNumber
+    lineNumber,
   }));
   return unwrappedViolations;
 }
@@ -41,7 +41,7 @@ function formatViolationAsOneLineMessage(violation) {
 function formatIncidentObjects(file) {
   const {
     filename: fileName,
-    file_results: { violations }
+    file_results: { violations },
   } = file;
 
   const formattedViolations = violations
@@ -51,7 +51,7 @@ function formatIncidentObjects(file) {
 
   return {
     fileName,
-    formattedViolations
+    formattedViolations,
   };
 }
 
