@@ -75,6 +75,8 @@ function main() {
   if (formattedViolations.length > 0) {
     // Exit with error so that GitHub can mark as not passing.
     process.exit(1);
+  } else {
+    process.exit(0);
   }
 }
 
